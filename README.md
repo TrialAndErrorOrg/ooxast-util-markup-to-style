@@ -3,45 +3,47 @@
 
 # ooxast-util-markup-to-style
 
+[![npm version](https://badge.fury.io/js/ooxast-util-markup-to-style.svg)](https://badge.fury.io/js/ooxast-util-markup-to-style) [![npm downloads](https://img.shields.io/npm/dm/ooxast-util-markup-to-style.svg)](https://www.npmjs.com/package/ooxast-util-markup-to-style)
+
 Find certain markup in an ooxast tree and turn it into styles.
 
 ## Contents
 
-*   [ooxast-util-markup-to-style](#ooxast-util-markup-to-style)
-    *   [Contents](#contents)
-    *   [What is this?](#what-is-this)
-    *   [When should I use this?](#when-should-i-use-this)
-    *   [Install](#install)
-    *   [Use](#use)
-    *   [API](#api)
-        *   [`markupToStyle()`](#markuptostyle)
-            *   [Signature](#signature)
-            *   [Type parameters](#type-parameters)
-            *   [Parameters](#parameters)
-            *   [Returns](#returns)
-        *   [`Option`](#option)
-            *   [Properties](#properties)
-                *   [`ignorePunctuation?`](#ignorepunctuation)
-                    *   [Default](#default)
-                *   [`markup`](#markup)
-                    *   [Example](#example)
-                    *   [Example](#example-1)
-                    *   [Example](#example-2)
-                    *   [Example](#example-3)
-                *   [`matchAll?`](#matchall)
-                    *   [Default](#default-1)
-                *   [`matchFull?`](#matchfull)
-                    *   [Default](#default-2)
-                *   [`style`](#style)
-                    *   [Example](#example-4)
-        *   [`Options`](#options)
-    *   [Syntax tree](#syntax-tree)
-    *   [Types](#types)
-    *   [Compatibility](#compatibility)
-    *   [Security](#security)
-    *   [Related](#related)
-    *   [Contribute](#contribute)
-    *   [License](#license)
+- [ooxast-util-markup-to-style](#ooxast-util-markup-to-style)
+  - [Contents](#contents)
+  - [What is this?](#what-is-this)
+  - [When should I use this?](#when-should-i-use-this)
+  - [Install](#install)
+  - [Use](#use)
+  - [API](#api)
+    - [`markupToStyle()`](#markuptostyle)
+      - [Signature](#signature)
+      - [Type parameters](#type-parameters)
+      - [Parameters](#parameters)
+      - [Returns](#returns)
+    - [`Option`](#option)
+      - [Properties](#properties)
+        - [`ignorePunctuation?`](#ignorepunctuation)
+          - [Default](#default)
+        - [`markup`](#markup)
+          - [Example](#example)
+          - [Example](#example-1)
+          - [Example](#example-2)
+          - [Example](#example-3)
+        - [`matchAll?`](#matchall)
+          - [Default](#default-1)
+        - [`matchFull?`](#matchfull)
+          - [Default](#default-2)
+        - [`style`](#style)
+          - [Example](#example-4)
+    - [`Options`](#options)
+  - [Syntax tree](#syntax-tree)
+  - [Types](#types)
+  - [Compatibility](#compatibility)
+  - [Security](#security)
+  - [Related](#related)
+  - [Contribute](#contribute)
+  - [License](#license)
 
 ## What is this?
 
@@ -67,7 +69,7 @@ pnpm add ooxast-util-markup-to-style
 
 ## API
 
-***
+---
 
 ### `markupToStyle()`
 
@@ -79,22 +81,22 @@ markupToStyle<I>(tree: I, options: Options = ...): I;
 
 #### Type parameters
 
-*   `I` *extends* `P` | `Root` = `Root`
+- `I` _extends_ `P` | `Root` = `Root`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `tree` | `I` |
+| Name      | Type                            |
+| :-------- | :------------------------------ |
+| `tree`    | `I`                             |
 | `options` | [`Options`](modules.md#options) |
 
 #### Returns
 
 `I`
 
-Defined in:  [ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts:87](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts#L87)
+Defined in: [ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts:87](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts#L87)
 
-***
+---
 
 ### `Option`
 
@@ -113,12 +115,86 @@ Likewise, if `markup: 'w:b'` is specified and only a period at the end of the pa
 
 true
 
-Defined in:  [ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts:59](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts#L59)
+Defined in: [ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts:59](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts#L59)
 
 ##### `markup`
 
-> `"w:rPrChange"` | `"w:bdr"` | `"w:color"` | `"w:eastAsianLayout"` | `"w:em"` | `"w:fitText"` | `"w:rFonts"` | `"w:highlight"` | `"w:lang"` | `"w:shd"` | `"w:position"` | `"w:spacing"` | `"w:effect"` | `"w:w"` | `"w:u"` | `"w:vertAlign"` | `"w:shadow"` | `"w:sz"` | `"w:snapToGrid"` | `"w:cs"` | `"w:oMath"` | `"w:b"` | `"w:i"` | `"w:rtl"` | `"w:bCs"` | `"w:caps"` | `"w:dstrike"` | `"w:emboss"` | `"w:iCs"` | `"w:imprint"` | `"w:kern"` | `"w:noProof"` | `"w:outline"` | `"w:rStyle"` | `"w:smallCaps"` | `"w:specVanish"` | `"w:strike"` | `"w:szCs"` | `"w:vanish"` | `"w:webHidden"` | (`"w:rPrChange"` | `"w:bdr"` | `"w:color"` | `"w:eastAsianLayout"` | `"w:em"` | `"w:fitText"` | `"w:rFonts"` | `"w:highlight"` | `"w:lang"` | `"w:shd"` | `"w:position"` | `"w:spacing"` | `"w:effect"` | `"w:w"` | `"w:u"` | `"w:vertAlign"` | `"w:shadow"` | `"w:sz"` | `"w:snapToGrid"` | `"w:cs"` | `"w:oMath"` | `"w:b"` | `"w:i"` | `"w:rtl"` | `"w:bCs"` | `"w:caps"` | `"w:dstrike"` | `"w:emboss"` | `"w:iCs"` | `"w:imprint"` | `"w:kern"` | `"w:noProof"` | `"w:outline"` | `"w:rStyle"` | `"w:smallCaps"` | `"w:specVanish"` | `"w:strike"` | `"w:szCs"` | `"w:vanish"` | `"w:webHidden"`)[] | (`rPr`: `Partial`<`Record`<`"w:rPrChange"` | `"w:bdr"` | `"w:color"` | `"w:eastAsianLayout"` | `"w:em"` | `"w:fitText"` | `"w:rFonts"` | `"w:highlight"` | `"w:lang"` | `"w:shd"` | `"w:position"` | `"w:spacing"` | `"w:effect"` | `"w:w"` | `"w:u"` | `"w:vertAlign"` | `"w:shadow"` | `"w:sz"` | `"w:snapToGrid"` | `"w:cs"` | `"w:oMath"` | `"w:b"` | `"w:i"` | `"w:rtl"` | `"w:bCs"` | `"w:caps"` | `"w:dstrike"` | `"w:emboss"` | `"w:iCs"` | `"w:imprint"` | `"w:kern"` | `"w:noProof"` | `"w:outline"` | `"w:rStyle"` | `"w:smallCaps"` | `"w:specVanish"` | `"w:strike"` | `"w:szCs"` | `"w:vanish"` | `"w:webHidden"`, `undefined` | `never` | `Border`[] | `OnOff`<`"oMath"`>[] | `OnOff`<`"b"`>[] | `OnOff`<`"i"`>[] | `TextEffect`[] | `OnOff`<`"cs"`>[] | `Highlight`[] | `OnOff`<`"rtl"`>[] | `HpsMeasure`<`"sz"`>[] | `Color`[] | `TextScale`[] | `Shd`[] | `OnOff`<`"snapToGrid"`>[] | `SignedTwipsMeasure`[] | `OnOff`<`"bCs"`>[] | `OnOff`<`"caps"`>[] | `OnOff`<`"dstrike"`>[] | `EastAsianLayout`[] | `Em`[] | `OnOff`<`"emboss"`>[] | `FitText`[] | `OnOff`<`"iCs"`>[] | `OnOff`<`"imprint"`>[] | `HpsMeasure`<`"kern"`>[] | `Language`[] | `OnOff`<`"noProof"`>[] | `OnOff`<`"outline"`>[] | `SignedHpsMeasure`[] | `Fonts`[] | `StringTag`<`"rStyle"`>[] | `OnOff`<`"shadow"`>[] | `OnOff`<`"smallCaps"`>[] | `OnOff`<`"specVanish"`>[] | `OnOff`<`"strike"`>[] | `HpsMeasure`<`"szCs"`>[] | `Underline`[] | `OnOff`<`"vanish"`>[] | `VerticalAlignRun`[] | `OnOff`<`"webHidden"`>[] | {
-> `w:val`?: `boolean`;
+> `"w:rPrChange"` | `"w:bdr"` | `"w:color"` | `"w:eastAsianLayout"` | `"w:em"` | `"w:fitText"` | `"w:rFonts"` | `"w:highlight"` | `"w:lang"` | `"w:shd"` | `"w:position"` | `"w:spacing"` | `"w:effect"` | `"w:w"` | `"w:u"` | `"w:vertAlign"` | `"w:shadow"` | `"w:sz"` | `"w:snapToGrid"` | `"w:cs"` | `"w:oMath"` | `"w:b"` | `"w:i"` | `"w:rtl"` | `"w:bCs"` | `"w:caps"` | `"w:dstrike"` | `"w:emboss"` | `"w:iCs"` | `"w:imprint"` | `"w:kern"` | `"w:noProof"` | `"w:outline"` | `"w:rStyle"` | `"w:smallCaps"` | `"w:specVanish"` | `"w:strike"` | `"w:szCs"` | `"w:vanish"` | `"w:webHidden"` | (`"w:rPrChange"` | `"w:bdr"` | `"w:color"` | `"w:eastAsianLayout"` | `"w:em"` | `"w:fitText"` | `"w:rFonts"` | `"w:highlight"` | `"w:lang"` | `"w:shd"` | `"w:position"` | `"w:spacing"` | `"w:effect"` | `"w:w"` | `"w:u"` | `"w:vertAlign"` | `"w:shadow"` | `"w:sz"` | `"w:snapToGrid"` | `"w:cs"` | `"w:oMath"` | `"w:b"` | `"w:i"` | `"w:rtl"` | `"w:bCs"` | `"w:caps"` | `"w:dstrike"` | `"w:emboss"` | `"w:iCs"` | `"w:imprint"` | `"w:kern"` | `"w:noProof"` | `"w:outline"` | `"w:rStyle"` | `"w:smallCaps"` | `"w:specVanish"` | `"w:strike"` | `"w:szCs"` | `"w:vanish"` | `"w:webHidden"`)[] | (`rPr`: `Partial`<`Record`<`"w:rPrChange"` | `"w:bdr"` | `"w:color"` | `"w:eastAsianLayout"` | `"w:em"` | `"w:fitText"` | `"w:rFonts"` | `"w:highlight"` | `"w:lang"` | `"w:shd"` | `"w:position"` | `"w:spacing"` | `"w:effect"` | `"w:w"` | `"w:u"` | `"w:vertAlign"` | `"w:shadow"` | `"w:sz"` | `"w:snapToGrid"` | `"w:cs"` | `"w:oMath"` | `"w:b"` | `"w:i"` | `"w:rtl"` | `"w:bCs"` | `"w:caps"` | `"w:dstrike"` | `"w:emboss"` | `"w:iCs"` | `"w:imprint"` | `"w:kern"` | `"w:noProof"` | `"w:outline"` | `"w:rStyle"` | `"w:smallCaps"` | `"w:specVanish"` | `"w:strike"` | `"w:szCs"` | `"w:vanish"` | `"w:webHidden"`, {
+> `w:color`?: `string`;
+> `w:frame`?: `string`;
+> `w:shadow`?: `string`;
+> `w:space`?: `string`;
+> `w:sz`?: `string`;
+> `w:themeColor`?: `ThemeColorVal`;
+> `w:themeShade`?: `string`;
+> `w:themeTint`?: `string`;
+> `w:val`: `BorderVal`;
+> } | {
+> `w:themeColor`?: `ThemeColorVal`;
+> `w:themeShade`?: `string`;
+> `w:themeTint`?: `string`;
+> `w:val`: `string`;
+> } | {
+> `w:combine`?: `string`;
+> `w:combineBrackets`?: `CombineBracketsVal`;
+> `w:id`?: `string`;
+> `w:vert`?: `string`;
+> `w:vertCompress`?: `string`;
+> } | {
+> `w:val`: `EmVal`;
+> } | {
+> `w:id`?: `string`;
+> `w:val`: `string`;
+> } | {
+> `w:ascii`: `string`;
+> `w:asciiTheme`: `ThemeVal`;
+> `w:cs`: `string`;
+> `w:cstheme`: `ThemeVal`;
+> `w:eastAsia`: `string`;
+> `w:eastAsiaTheme`: `ThemeVal`;
+> `w:hAnsi`: `string`;
+> `w:hAnsiTheme`: `ThemeVal`;
+> `w:hint`: `HintVal`;
+> } | {
+> `w:val`: `HighlightColorVal`;
+> } | {
+> `w:val`: `string`;
+> } | {
+> `w:bidi`?: `string`;
+> `w:eastAsia`?: `string`;
+> `w:val`?: `string`;
+> } | {
+> `w:val`: `string`;
+> } | {
+> `w:color`?: `string`;
+> `w:fill`?: `string`;
+> `w:themeColor`?: `ThemeColorVal`;
+> `w:themeFill`?: `ThemeColorVal`;
+> `w:themeFillShade`?: `string`;
+> `w:themeFillTint`?: `string`;
+> `w:themeShade`?: `string`;
+> `w:themeTint`?: `string`;
+> `w:val`: `ShdVal`;
+> } | {
+> `w:val`: `string`;
+> } | {
+> `w:val`: `string`;
+> } | {
+> `w:val`: `string`;
+> } | {
+> `w:val`: `TextEffectVal`;
+> } | {
+> `w:val`: `string`;
+> } | {
+> `w:color`?: `string`;
+> `w:themeColor`?: `ThemeColorVal`;
+> `w:themeShade`?: `string`;
+> `w:themeTint`?: `string`;
+> `w:val`?: `UnderlineVal`;
+> } | {
+> `w:val`: `VerticalAlignRunVal`;
+> } | {
+> `w:val`?: `string`;
 > }>>) => `boolean`
 
 The markup to look for.
@@ -134,7 +210,7 @@ You can also specify a matcher function which takes a JSON representation of the
 ###### Example
 
 ```ts
-['w:b', 'w:i']
+;['w:b', 'w:i']
 ```
 
 ###### Example
@@ -148,10 +224,10 @@ Match text that is bold and italic, and red:
 ###### Example
 
 ```ts
-(rPr) => rPr['w:b'] && rPr['w:i'] && rPr['w:color']?.['w:val'] === 'FF0000'
+;(rPr) => rPr['w:b'] && rPr['w:i'] && rPr['w:color']?.['w:val'] === 'FF0000'
 ```
 
-Defined in:  [ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts:23](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts#L23)
+Defined in: [ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts:23](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts#L23)
 
 ##### `matchAll?`
 
@@ -161,10 +237,10 @@ If true (default), the style is applied if all of the markup elements are presen
 
 If false, the style is applied if any of the markup elements are present.
 
-*Example*
-If `['b', 'i']` is specified with `matchAll: true`, the style will only be applied if the text is bold *and* italic.
+_Example_
+If `['b', 'i']` is specified with `matchAll: true`, the style will only be applied if the text is bold _and_ italic.
 
-If `['b', 'i']` is specified with `matchAll: false`, the style will be applied if the text is bold *or* italic.
+If `['b', 'i']` is specified with `matchAll: false`, the style will be applied if the text is bold _or_ italic.
 
 ###### Default
 
@@ -172,7 +248,7 @@ true
 
 Does not apply if `markup` is a function.
 
-Defined in:  [ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts:44](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts#L44)
+Defined in: [ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts:44](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts#L44)
 
 ##### `matchFull?`
 
@@ -184,7 +260,7 @@ Whether the entire paragraph should contain the markup, or the markup can be pre
 
 true
 
-Defined in:  [ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts:50](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts#L50)
+Defined in: [ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts:50](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts#L50)
 
 ##### `style`
 
@@ -198,9 +274,9 @@ The style to apply if the markup is present.
 'Heading 1'
 ```
 
-Defined in:  [ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts:29](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts#L29)
+Defined in: [ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts:29](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts#L29)
 
-***
+---
 
 ### `Options`
 
@@ -210,20 +286,20 @@ Defined in:  [ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts
 
 ```ts
 const options: Options = [
-// find all paragraphs that are bold and larger than 24pt and make it a Title
- {
-  markup: (rPr) => rPr['w:b'] && rPr['w:sz'] && rPr['w:sz']['w:val'] > 24,
-  style: 'Title',
- },
-// find all paragraphs that are strikethrough text and make it a Comment
- {
-  markup: 'w:strike',
-  style: 'Comment',
- },
+  // find all paragraphs that are bold and larger than 24pt and make it a Title
+  {
+    markup: (rPr) => rPr['w:b'] && rPr['w:sz'] && rPr['w:sz']['w:val'] > 24,
+    style: 'Title',
+  },
+  // find all paragraphs that are strikethrough text and make it a Comment
+  {
+    markup: 'w:strike',
+    style: 'Comment',
+  },
 ]
 ```
 
-Defined in:  [ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts:80](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts#L80)
+Defined in: [ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts:80](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts#L80)
 
 ## Syntax tree
 
@@ -244,59 +320,31 @@ This package uses the [ooxast][ooxast] syntax tree.
 [GPL-3.0-or-later](LICENSE) © Thomas F. K. Jorna
 
 [unified]: https://unifiedjs.com
-
 [unifiedgh]: https://github.com/unifiedjs/unified
-
 [xast-from-xml]: https://github.com/syntax-tree/xast-util-from-xml
-
 [rehype]: https://github.com/rehypejs/rehype
-
 [rejour]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour
-
 [rejour-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-parse
-
 [rejour-stringify]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-stringify
-
 [rejour-move-abstract]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-move-abstract
-
 [rejour-meta]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-meta
-
 [rejour-relatex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-relatex
-
 [relatex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex
-
 [relatex-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/relatex-parse
-
 [jast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jast
-
 [jast-util-to-texast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jast-util-to-texast
-
 [jastscript]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jastscript
-
 [texast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/texast
-
 [texast-util-to-latex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/texast-util-to-latex
-
 [hast]: https://github.com/syntax-tree/hast
-
 [xast]: https://github.com/syntax-tree/xast
-
 [mdast]: https://github.com/syntax-tree/mdast
-
 [mdast-markdown]: https://github.com/syntax-tree/mdast-util-to-markdown
-
 [latex-utensils]: https://github.com/tamuratak/latex-utensils
-
 [latexjs]: https://github.com/latexjs/latexjs
-
 [reoff]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff
-
 [reoff-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff/reoff-parse
-
 [reoff-rejour]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff/reoff-rejour
-
 [ooxast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast/ooxast
-
 [ooxast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast/ooxast-util-to-jast
-
 [ooxast-util-markup-to-style]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast-util-markup-to-style
